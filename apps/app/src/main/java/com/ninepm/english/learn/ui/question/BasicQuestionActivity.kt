@@ -18,6 +18,28 @@ class BasicQuestionActivity : AppCompatActivity() , View.OnClickListener {
         binding = basicQuestionActivity.questionBasicContentDetail
         setSupportActionBar(basicQuestionActivity.questionBasicToolbar)
         setContentView(basicQuestionActivity.root)
+        
+        basicQuestionActivity.imgMenu.setOnClickListener{
+            val popupMenu = PopupMenu(this, it)
+            popupMenu.setOnMenuItemClickListener { item ->
+                when(item.itemId){
+                    R.id.about -> {
+                        val intent = Intent (this, AboutActivity::class.java)
+                        startActivity(intent)
+                        true
+                    }
+                    R.id.history -> {
+                        val intent = Intent (this, HistoryActivity::class.java)
+                        startActivity(intent)
+                        true
+                    }
+                    else -> false
+                }
+            }
+            popupMenu.inflate(R.menu.popup_menu)
+            popupMenu.show()
+        }
+        
     }
 
     override fun onClick(v: View?) {
