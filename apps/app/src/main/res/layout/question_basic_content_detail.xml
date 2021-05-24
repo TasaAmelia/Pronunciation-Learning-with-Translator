@@ -45,6 +45,21 @@
             android:text="@string/question_test"
             android:textColor="@color/white"
             android:textSize="16sp" />
+        
+         <ImageButton
+            android:id="@+id/img_answer_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_volume_up_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="9.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -81,17 +96,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
-
-            <ImageButton
-                android:id="@+id/img_answer_play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparent"
-                android:src="@drawable/ic_volume_up_blue"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/img_answer_status"
